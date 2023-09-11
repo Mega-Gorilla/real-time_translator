@@ -6,13 +6,13 @@ import time
 from rich import print
 
 class SpeechHandler:
-    def __init__(self, queue, speech_key, speech_region, language='ja-JP',mic_id=None,debug=True):
+    def __init__(self, queue, speech_key, speech_region, language='ja-JP',mic_id=None,TimeoutMs='3000',debug=True):
         self.done = False
         self.loop = asyncio.get_event_loop()
         self.speech_key = speech_key
         self.speech_region = speech_region
         self.device_ID = mic_id
-        self.EndSilenceTimeoutMs = "3000"
+        self.EndSilenceTimeoutMs = TimeoutMs
         self.language = language
         self.speech_recognizer = None
         self.result_text = ""
