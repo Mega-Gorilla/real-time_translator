@@ -10,7 +10,6 @@ import sounddevice as sd
 import os, asyncio, time, sys
 import openai
 #keys
-openai.api_key = os.getenv("OPENAI_API_KEY")
 speech_key = os.getenv("AZURE_API_KEY")
 azure_transrate_key = os.getenv("AZURE_Transrate_KEY")
 region = "japaneast"
